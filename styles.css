@@ -1,0 +1,206 @@
+:root {
+  --ink: #111117;
+  --paper: #f3f1eb;
+  --lavender: #b8b3ef;
+  --line: rgba(17, 17, 23, .16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+body.menu-open { overflow: hidden; }
+
+.nav {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  color: white;
+}
+.brand {
+  color: inherit;
+  text-decoration: none;
+  font: 800 28px/1 "Manrope", sans-serif;
+  letter-spacing: -2px;
+}
+.brand span { color: #a9a2f1; }
+.nav-links { display: flex; gap: 42px; }
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+  padding: 10px;
+}
+.menu-button span { display: block; width: 22px; height: 1px; background: currentColor; margin: 5px 0; }
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  height: 100vh;
+  max-height: 920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(12,11,25,.2), rgba(12,11,25,.75)),
+    radial-gradient(circle at 50% 70%, #7772a8 0, #343246 34%, #17171f 72%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+.glow { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .45; }
+.glow-one { width: 420px; height: 420px; right: -180px; top: 80px; border: 1px solid #d5cff9; box-shadow: inset 0 0 80px rgba(206,199,255,.15); }
+.glow-two { width: 240px; height: 240px; left: 8%; bottom: 8%; border: 1px solid #d5cff9; }
+.eyebrow { z-index: 2; margin: 0 0 28px; font-size: 11px; letter-spacing: 5px; }
+.hero h1 {
+  z-index: 2;
+  margin: 0;
+  font: 800 clamp(72px, 11vw, 150px)/.78 "Manrope", sans-serif;
+  letter-spacing: -9px;
+}
+.hero h1 em { color: #bbb4ee; font-style: normal; }
+.hero-copy { z-index: 2; margin: 38px 0 0; font-size: 15px; letter-spacing: 1px; }
+.scroll-link {
+  position: absolute;
+  z-index: 3;
+  bottom: 34px;
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+.scroll-link span { display: inline-block; margin-left: 10px; font-size: 16px; }
+
+.section { padding: 110px 5vw; }
+.section-heading { display: flex; align-items: flex-start; gap: 28px; margin-bottom: 54px; }
+.section-heading h2 { margin: 0; font: 800 clamp(48px, 7vw, 96px)/.9 "Manrope", sans-serif; letter-spacing: -6px; }
+.section-number { margin: 5px 0 0; font-size: 11px; letter-spacing: 2px; }
+
+.members { background: var(--paper); }
+.member-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.member-card { margin: 0; }
+.portrait {
+  position: relative;
+  aspect-ratio: .72;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, transparent 20%, color-mix(in srgb, var(--accent) 32%, #252530)),
+    #d8d5cd;
+}
+.portrait::before {
+  content: "";
+  position: absolute;
+  width: 44%;
+  aspect-ratio: .82;
+  top: 14%;
+  border-radius: 48% 48% 40% 40%;
+  background: linear-gradient(150deg, #f2ede5 0 16%, #aaa4a8 16% 25%, #e7ddd2 25% 100%);
+  box-shadow: 0 42px 0 32px rgba(32,32,39,.82);
+  filter: grayscale(.15);
+}
+.portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,12,18,.22), transparent 55%); }
+.portrait span { position: absolute; z-index: 2; top: 18px; left: 18px; font-size: 9px; letter-spacing: 2px; writing-mode: vertical-rl; }
+.member-info { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding: 14px 2px 12px; }
+.member-info h3 { margin: 0; font: 700 14px "Manrope", sans-serif; }
+.member-info p { margin: 0; color: #77747d; font-size: 9px; }
+
+.discography { background: #17171e; color: white; }
+.album { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+.album-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 55%, #d1caef 0 4%, #8882bb 5% 20%, #4a486b 21% 22%, #252633 42%, #16171d 65%);
+}
+.album-art::after { content:""; position:absolute; inset: 28px; border: 1px solid rgba(255,255,255,.18); }
+.album-orbit { position:absolute; width: 58%; aspect-ratio:1; border:1px solid rgba(255,255,255,.38); border-radius:50%; box-shadow: 0 0 60px rgba(205,199,255,.25); }
+.album-title { position:relative; z-index:2; text-align:center; font:800 50px/.82 "Manrope"; letter-spacing:-4px; }
+.album-details { display:flex; flex-direction:column; justify-content:center; padding: 30px 7vw; background:#dcd9cf; color:var(--ink); }
+.album-kicker { font-size:10px; letter-spacing:3px; }
+.album-details h3 { margin:20px 0 40px; font:800 clamp(46px,6vw,78px)/.88 "Manrope"; letter-spacing:-5px; }
+.album-details ol { list-style:none; margin:0 0 38px; padding:0; border-top:1px solid var(--line); }
+.album-details li { display:grid; grid-template-columns:38px 1fr auto; padding:15px 0; border-bottom:1px solid var(--line); font-size:13px; }
+.album-details li span { color:#89858a; }
+.album-details li small { font-size:11px; }
+.play-button { align-self:flex-start; border:0; background:var(--ink); color:white; padding:15px 22px; font-size:10px; letter-spacing:2px; cursor:pointer; }
+.play-icon { margin-right:12px; font-size:9px; }
+
+.story { position:relative; min-height:620px; overflow:hidden; background:#aaa5dc; }
+.story-mark { position:absolute; right:-2vw; bottom:-8vw; color:rgba(255,255,255,.12); font:800 29vw/.8 "Manrope"; letter-spacing:-25px; }
+.story blockquote { position:relative; z-index:2; margin:90px 0 28px 18%; font:700 clamp(38px,6vw,84px)/1.05 "Manrope"; letter-spacing:-5px; }
+.story-copy { position:relative; z-index:2; margin-left:18.5%; font-size:14px; }
+
+footer { height:160px; display:flex; align-items:center; justify-content:space-between; padding:0 5vw; background:#111117; color:white; }
+footer p { font-size:9px; letter-spacing:2px; }
+.mobile-menu { display:none; }
+
+@media (max-width: 900px) {
+  .nav { height:72px; }
+  .nav-links { display:none; }
+  .menu-button { display:block; color:white; }
+  .hero { min-height:660px; }
+  .hero h1 { letter-spacing:-5px; }
+  .member-grid { grid-template-columns: repeat(2,1fr); }
+  .member-card:last-child { grid-column:span 2; width:50%; }
+  .album { grid-template-columns:1fr; }
+  .album-art { min-height:520px; }
+  .album-details { padding:60px 7vw; }
+}
+
+@media (max-width: 560px) {
+  .nav { padding:0 20px; }
+  .hero h1 { font-size:66px; }
+  .hero-copy { width:270px; line-height:1.7; }
+  .section { padding:72px 20px; }
+  .section-heading { gap:14px; margin-bottom:34px; }
+  .section-heading h2 { font-size:48px; letter-spacing:-4px; }
+  .member-grid { gap:8px; }
+  .member-info { display:block; }
+  .member-info p { margin-top:5px; }
+  .portrait::before { box-shadow:0 28px 0 18px rgba(32,32,39,.82); }
+  .album-art { min-height:380px; }
+  .album-details { padding:45px 20px; }
+  .album-details h3 { font-size:48px; }
+  .story { min-height:520px; }
+  .story blockquote { margin:70px 0 24px; font-size:38px; letter-spacing:-3px; }
+  .story-copy { margin-left:0; width:260px; line-height:1.7; }
+  footer { height:130px; padding:0 20px; }
+  .mobile-menu {
+    position:fixed; z-index:15; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; background:#17171e; opacity:0; visibility:hidden; transition:.25s ease;
+  }
+  .mobile-menu.open { opacity:1; visibility:visible; }
+  .mobile-menu a { color:white; text-decoration:none; font:800 44px "Manrope"; }
+}
