@@ -1,110 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0d0d12">
-  <title>TOMORROW X TOGETHER — Official Fan Space</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090909" />
+  <title>TXT — Fan Streaming Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="nav" aria-label="주요 메뉴">
-    <a class="brand" href="#top" aria-label="TXT 홈">TXT<span>.</span></a>
-    <div class="nav-links">
-      <a href="#members">MEMBERS</a>
-      <a href="#discography">MUSIC</a>
-      <a href="#story">STORY</a>
-    </div>
-    <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </nav>
+  <header class="topbar" id="topbar">
+    <a class="logo" href="#top" aria-label="TXT Archive home">TXT</a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#top" class="active">홈</a>
+      <a href="#albums">앨범</a>
+      <a href="#archive">아카이브</a>
+      <a href="#world">세계관</a>
+    </nav>
+    <button class="profile" type="button" aria-label="프로필">MOA</button>
+  </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="glow glow-one"></div>
-      <div class="glow glow-two"></div>
-      <p class="eyebrow">TOMORROW X + TOGETHER</p>
-      <h1 id="hero-title">TOGETHER,<br><em>WE CREATE</em></h1>
-      <p class="hero-copy">서로 다른 다섯 사람이 하나의 이야기로 만나는 곳.</p>
-      <a class="scroll-link" href="#members">EXPLORE <span>↓</span></a>
-    </section>
-
-    <section class="members section" id="members" aria-labelledby="members-title">
-      <header class="section-heading">
-        <p class="section-number">01</p>
-        <h2 id="members-title">THE FIVE</h2>
-      </header>
-      <div class="member-grid">
-        <article class="member-card" style="--accent:#7f8cff">
-          <div class="portrait"><span>SOOBIN</span></div>
-          <div class="member-info"><h3>SOOBIN</h3><p>Leader / Vocal</p></div>
-        </article>
-        <article class="member-card" style="--accent:#e86e96">
-          <div class="portrait"><span>YEONJUN</span></div>
-          <div class="member-info"><h3>YEONJUN</h3><p>Rap / Dance / Vocal</p></div>
-        </article>
-        <article class="member-card" style="--accent:#73c5af">
-          <div class="portrait"><span>BEOMGYU</span></div>
-          <div class="member-info"><h3>BEOMGYU</h3><p>Vocal / Rap</p></div>
-        </article>
-        <article class="member-card" style="--accent:#e5a94d">
-          <div class="portrait"><span>TAEHYUN</span></div>
-          <div class="member-info"><h3>TAEHUN</h3><p>Vocal</p></div>
-        </article>
-        <article class="member-card" style="--accent:#9f83c5">
-          <div class="portrait"><span>HUENINGKAI</span></div>
-          <div class="member-info"><h3>HUENINGKAI</h3><p>Vocal / Maknae</p></div>
-        </article>
+    <section class="hero" aria-label="최근 공식 뮤직비디오">
+      <div class="hero-image" role="img" aria-label="TOMORROW X TOGETHER"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="hero-series">TOMORROW X TOGETHER ORIGINAL</p>
+        <h1>Beautiful<br>Strangers</h1>
+        <div class="meta"><span>2024</span><span>뮤직비디오</span><span>The Star Chapter: SANCTUARY</span></div>
+        <p class="description">낯선 존재였지만 어느새 서로를 구원한 시간. TXT가 노래하는 ‘소중한 낯선 너’를 만나보세요.</p>
+        <div class="hero-actions">
+          <button class="button button-light" id="playHero" type="button"><span>▶</span> 재생</button>
+          <button class="button button-dark" id="openDetails" type="button"><span>ⓘ</span> 상세 정보</button>
+        </div>
       </div>
+      <div class="hero-rank"><strong>TOP 10</strong><span>오늘의 시리즈</span></div>
     </section>
 
-    <section class="discography section" id="discography" aria-labelledby="music-title">
-      <header class="section-heading">
-        <p class="section-number">02</p>
-        <h2 id="music-title">LATEST SOUND</h2>
-      </header>
-      <article class="album">
-        <div class="album-art">
-          <span class="album-orbit"></span>
-          <div class="album-title">THE<br>STAR<br>CHAPTER</div>
-        </div>
-        <div class="album-details">
-          <p class="album-kicker">EP · 2025</p>
-          <h3>DREAM OF<br>A LIGHT</h3>
-          <ol>
-            <li><span>01</span> Dreaming Together <small>3:16</small></li>
-            <li><span>02</span> Blue Horizon <small>3:08</small></li>
-            <li><span>03</span> Our Tomorrow <small>3:24</small></li>
-          </ol>
-          <button class="play-button" type="button" aria-label="재생"><span class="play-icon">▶</span> LISTEN NOW</button>
-        </div>
-      </article>
-    </section>
+    <div class="catalog">
+      <section class="row" id="albums">
+        <div class="row-heading"><h2>TXT 앨범 컬렉션</h2><button type="button" class="row-more" data-scroll="albumRail">전체 보기 ›</button></div>
+        <div class="poster-rail" id="albumRail"></div>
+      </section>
 
-    <section class="story section" id="story" aria-labelledby="story-title">
-      <div class="story-mark">TXT</div>
-      <header class="section-heading">
-        <p class="section-number">03</p>
-        <h2 id="story-title">OUR STORY</h2>
-      </header>
-      <blockquote>“서로가 가진 이야기를<br>하나로 엮어내는 시간.”</blockquote>
-      <p class="story-copy">청춘의 성장과 감정을 노래하는 투모로우바이투게더의 세계로 들어오세요.</p>
-    </section>
+      <section class="row" id="archive">
+        <div class="row-heading"><h2>공식 영상 아카이브</h2><button type="button" class="row-more" data-scroll="videoRail">전체 보기 ›</button></div>
+        <div class="poster-rail landscape" id="videoRail"></div>
+      </section>
+
+      <section class="world row" id="world">
+        <div class="world-copy">
+          <p>THE TXT UNIVERSE</p>
+          <h2>서로 다른 세계를 넘어<br>하나의 이름으로</h2>
+          <div class="chapters" id="chapters"></div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <a class="brand" href="#top">TXT<span>.</span></a>
-    <p>FAN PROJECT · NOT OFFICIAL</p>
+    <p>TXT FANDOM STREAMING ARCHIVE</p>
+    <p>비공식 팬메이드 프로젝트 · HYBE 및 아티스트와 무관합니다.</p>
   </footer>
 
-  <div class="mobile-menu" aria-hidden="true">
-    <a href="#members">MEMBERS</a>
-    <a href="#discography">MUSIC</a>
-    <a href="#story">STORY</a>
+  <div class="modal-backdrop" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <article class="details-modal">
+      <button class="modal-close" id="closeModal" type="button" aria-label="닫기">×</button>
+      <div class="details-banner" id="detailsBanner">
+        <div class="details-gradient"></div>
+        <div class="details-banner-copy">
+          <p>TXT · OFFICIAL MV</p>
+          <h2 id="modalTitle">Beautiful Strangers</h2>
+        </div>
+      </div>
+      <div class="details-body">
+        <div class="details-primary">
+          <div class="details-actions">
+            <button class="button button-light" id="playModal" type="button"><span>▶</span> 재생</button>
+            <button class="round-button" type="button" aria-label="내가 찜한 콘텐츠">＋</button>
+          </div>
+          <div class="details-info">
+            <p><span class="match">98% 일치</span> <strong>2024</strong> MV</p>
+            <p><b>앨범</b> The Star Chapter: SANCTUARY</p>
+            <p><b>출연</b> 수빈, 연준, 범규, 태현, 휴닝카이</p>
+            <p><b>장르</b> Alternative Pop, Synth-pop</p>
+          </div>
+        </div>
+        <p class="details-description">낯선 듯 가까운 존재에 대한 위로와 연대감을 담은 노래입니다. 공식 뮤직비디오와 앨범 수록곡을 통해 TXT의 사운드를 탐색할 수 있습니다.</p>
+      </div>
+      <section class="track-section">
+        <h3>앨범 수록곡</h3>
+        <div class="track-list" id="trackList"></div>
+      </section>
+    </article>
+  </div>
+
+  <div class="player-modal" id="playerModal" role="dialog" aria-modal="true" aria-label="뮤직비디오 플레이어" aria-hidden="true">
+    <button class="player-close" id="closePlayer" type="button" aria-label="닫기">×</button>
+    <div class="video-frame" id="videoFrame"></div>
   </div>
 
   <script src="script.js"></script>
